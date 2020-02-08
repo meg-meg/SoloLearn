@@ -7,6 +7,7 @@ bool guard_present(const char* input)
 	int thief_index = 0;
 	bool guard_present = false;
 
+	// Record the index numbers of where the thief and money are located in the c string
 	for (int i = 0; i < strlen(input); i++)
 	{
 		if (input[i] == '$')
@@ -19,6 +20,7 @@ bool guard_present(const char* input)
 		}
 	}
 
+	// Check if there is a guard present at in index between the thief and the money
 	if (money_index < thief_index)
 	{
 		for (int i = (money_index + 1); i < thief_index; i++)
@@ -41,6 +43,8 @@ bool guard_present(const char* input)
 		}
 	}
 
+	// If a guard is present between the thief and the money, return true
+	// If a guard is NOT present between the thief and the money, return false
 	if (guard_present)
 	{
 		return true;
