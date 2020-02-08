@@ -6,10 +6,13 @@ using namespace std;
 
 int main()
 {
+	// Get a string input such as xxxxxGxx$xxxT
 	std::string input;
-	// GxTxxGx$G
 	std::cin >> input;
 
+	// Check if a guard is present between the thief and the money
+	// If a guard is present, print quiet
+	// If a guard is not present, print ALARM
 	if (guard_present(input.c_str()))
 	{
 		std::cout << "quiet";
